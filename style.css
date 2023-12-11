@@ -65,6 +65,8 @@ h1 {
   position: absolute;
   top: calc(50% - (var(--ballSize)/2));
   left: calc(50% - (var(--ballSize)/2));
+  left: 0;
+  width: 100%;
 }
 
 #tabsContainer {
