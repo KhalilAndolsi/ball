@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mColor: #323232;
+  --pColor: #4dbef3;
+  --sColor: #f3744d;
+  --wColor: #f0f0f0;
+}
+
+html {
+  font-family: 'Silkscreen', sans-serif;
+}
+
+body {
+  background-color: var(--pColor);
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  color: var(--mColor);
+  text-align: center;
+  padding: 15px 0;
+}
+
+#gameContainer {
+  border: 5px solid var(--mColor);
+  width: 400px;
+  height: 80vh;
+  margin: 0 auto;
+  border-radius: 8px;
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  #gameContainer {
+    width: 90dvw;
+  }
+}
+
+#bat {
+  --w: 120px;
+  width: var(--w);
+  height: 30px;
+  border-radius: 4px;
+  background-color: var(--wColor);
+  border: 2px solid var(--mColor);
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - (var(--w)/2));
+}
+
+#ball {
+  --ballSize: 30px;
+  width: var(--ballSize);
+  height: var(--ballSize);
+  border-radius: 50%;
+  background-color: var(--sColor);
+  position: absolute;
+  top: calc(50% - (var(--ballSize)/2));
+  left: calc(50% - (var(--ballSize)/2));
+}
+
+#tabsContainer {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: 5px;
+  place-content: center;
+}
+
+#tabsContainer div {
+  background-color: var(--wColor);
+  border: 1px solid var(--mColor);
+  height: 30px;
+  border-radius: 4px;
+}
+
+#tabsContainer div.die {
+  background-color: transparent;
+}
