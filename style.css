@@ -54,8 +54,6 @@ h1 {
   position: absolute;
   bottom: 30px;
   left: calc(50% - (var(--w)/2));
-  left: 0;
-  width: 100%
 }
 
 #ball {
